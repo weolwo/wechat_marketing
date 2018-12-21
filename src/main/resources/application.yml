@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.198.132/wx_order?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.198.132
+    port: 6379
+server:
+  servlet:
+    context-path: /sell
+#wechat:
+#  mpAppId: wxd898fcb01713c658
+#  : 29d8a650bd31472aa87800e3b0dd739f2mpAppSecret
+#projectUrl:
+#  wechatMpAuthorize: http://sell.natapp4.cc
+#  wechatOpenAuthorize: http://sell.natapp4.cc
+#  sell: http://sell.natapp4.cc
+
+server:
+  port: 8761
+eureka:
+  client:
+#    fetch-registry: false
+#    register-with-eureka: false
+    service-url:
+        defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: eureka
